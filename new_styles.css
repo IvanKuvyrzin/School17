@@ -1,0 +1,469 @@
+.new-modal {
+    display: none; /* Скрываем модальные окна по умолчанию */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1; /* Расположение на переднем плане */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Включаем прокрутку */
+    background-color: rgba(0,0,0,0.4); /* Прозрачный черный фон */
+}
+
+.new-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Центрирование модального окна */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для модального окна */
+    text-align: center; /* Центрируем текст */
+}
+
+.new-modal-content input,
+.new-modal-content textarea {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.new-modal-content textarea {
+    resize: none;
+    height: 100px;
+}
+
+.new-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.new-close:hover, .new-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.new-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.new-save-info-btn {
+    background-color: #4CAF50;
+}
+
+.new-save-info-btn:hover {
+    background-color: #45a049;
+}
+
+.new-delete-info-btn {
+    background-color: #ff4c4c; 
+}
+
+.new-delete-info-btn:hover {
+    background-color: #d43f3f;
+}
+
+.new-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.new-btn-confirm {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.new-btn-cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.new-center-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.new-btn-add-info {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.new-btn-add-info:hover {
+    background-color: #45a049; /* Цвет при наведении */
+}
+
+.new-modal-add-info {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.new-modal-content-add-info {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.new-close-add-info {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.new-close-add-info:hover,
+.new-close-add-info:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Модальное окно для подтверждения удаления сведений */
+.new-modal-delete-info {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.new-modal-content-delete-info {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.new-close-delete-info {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.new-close-delete-info:hover, .new-close-delete-info:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.new-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.new-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.new-btn-confirm {
+    background-color: #ff4c4c; /* Зеленый цвет */
+    color: white;
+}
+
+.new-btn-cancel {
+    background-color: #ff4c4c; /* Красный цвет */
+    color: white;
+}
+
+
+/* CSS для модального окна добавления */
+.modal-add {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content-add {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.close-add {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-add:hover,
+.close-add:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content-add h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-content-add label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.modal-content-add input[type="text"],
+.modal-content-add textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.modal-content-add textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.modal-content-add .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content-add .btn:hover {
+    background-color: #45a049;
+}
+
+/* newstyle.css */
+
+.custom-modal-add {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.custom-modal-content-add {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.custom-close-add {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.custom-close-add:hover, .custom-close-add:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.custom-modal-content-add label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.custom-modal-content-add input[type="text"],
+.custom-modal-content-add textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    resize: none;
+}
+
+.custom-modal-content-add textarea {
+    height: 100px;
+}
+
+.custom-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: auto;
+}
+
+.custom-btn:hover {
+    background-color: #45a049;
+}
+
+.custom-modal-add, .custom-modal-edit, .custom-modal-delete {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.custom-modal-content-add, .custom-modal-content-edit, .custom-modal-content-delete {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.custom-input, .custom-textarea {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.custom-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.custom-btn:hover {
+    background-color: #45a049;
+}
+
+.custom-close-add, .custom-close-edit, .custom-close-delete {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.custom-close-add:hover, .custom-close-edit:hover, .custom-close-delete:hover,
+.custom-close-add:focus, .custom-close-edit:focus, .custom-close-delete:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.custom-delete-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-confirm, .btn-cancel {
+    background-color: #64abeb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-confirm:hover {
+    background-color: #519cd7;
+}
+
+.btn-cancel:hover {
+    background-color: #519cd7;
+}
